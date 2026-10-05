@@ -1,12 +1,12 @@
-using RoR2.ContentManagement;
-using UnityEngine;
 using System.Collections;
 using RoR2;
+using RoR2.ContentManagement;
 using RoR2.ExpansionManagement;
+using UnityEngine;
 
 namespace EvesRainyExpansion
 {
-    public class EvesRainyExpansionContent : IContentPackProvider
+    public class EvesContentProvider : IContentPackProvider
     {
         private static ItemDef _itemDef;
         private static AssetBundle _assetBundle;
@@ -15,7 +15,7 @@ namespace EvesRainyExpansion
         public static ReadOnlyContentPack ReadOnlyContentPack => new(EvesRainyExpansionContentPack);
         internal static ContentPack EvesRainyExpansionContentPack { get; } = new();
 
-        internal EvesRainyExpansionContent()
+        internal EvesContentProvider()
         {
             ContentManager.collectContentPackProviders += AddSelf;
         }
@@ -30,8 +30,8 @@ namespace EvesRainyExpansion
             }
             
             _assetBundle = asyncOperation.assetBundle;
-            _itemDef = _assetBundle.LoadAsset<ItemDef>("Test Item");
-            ExpansionDef expansionDef = _assetBundle.LoadAsset<ExpansionDef>("Test Expansion");
+            _itemDef = _assetBundle.LoadAsset<ItemDef>("TestItem");
+            ExpansionDef expansionDef = _assetBundle.LoadAsset<ExpansionDef>("TestExpansion");
 
             EvesRainyExpansionContentPack.itemDefs.Add(new[] { _itemDef });
             EvesRainyExpansionContentPack.expansionDefs.Add(new[] { expansionDef });

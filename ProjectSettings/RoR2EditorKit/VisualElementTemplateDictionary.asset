@@ -25,3 +25,7 @@ MonoBehaviour:
     _hexRepresentation: c8e741fcc27d0054388a0e4f31bffa18
   - k_templateName: ModWizard
     _hexRepresentation: 9f12dd9775576fd49aa4ede06ee59ab9
+  - k_templateName: ItemDefInspector
+    _hexRepresentation: 52dd9769ba8ce564ebfbe00836864b50
+  - k_templateName: ContextMenuWrapperElement
+    _hexRepresentation: 77311b170172e5f459337eef42862d00

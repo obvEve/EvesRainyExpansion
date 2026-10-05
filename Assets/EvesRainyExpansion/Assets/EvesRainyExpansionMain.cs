@@ -5,7 +5,7 @@ using UnityEngine;
 namespace EvesRainyExpansion
 {
     #region Dependencies
-    [BepInDependency("com.bepis.r2api.rules")]
+    /*[BepInDependency("com.bepis.r2api.rules")]
     [BepInDependency("com.bepis.r2api.teams")]
     [BepInDependency("com.bepis.r2api.extendedStringSerializer")]
     [BepInDependency("com.bepis.r2api.stages")]
@@ -13,11 +13,11 @@ namespace EvesRainyExpansion
     [BepInDependency("com.bepis.r2api.animations")]
     [BepInDependency("com.bepis.r2api.character_body")]
     [BepInDependency("com.bepis.r2api.skills")]
-    [BepInDependency("com.bepis.r2api")]
     [BepInDependency("com.bepis.r2api.proctype")]
     [BepInDependency("com.bepis.r2api.colors")]
     [BepInDependency("com.bepis.r2api.execute")]
-    [BepInDependency("com.bepis.r2api.buffs")]
+    [BepInDependency("com.bepis.r2api.buffs")]*/
+    [BepInDependency("com.bepis.r2api")]
     #endregion
     [BepInPlugin(GUID, MODNAME, VERSION)]
     public class EvesRainyExpansionMain : BaseUnityPlugin
@@ -34,7 +34,7 @@ namespace EvesRainyExpansion
         private void Awake()
         {
             Instance = this;
-            _ = new EvesRainyExpansionContent();
+            _ = new EvesContentProvider();
         }
 
         internal static void LogFatal(object data)
